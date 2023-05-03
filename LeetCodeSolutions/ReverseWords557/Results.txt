@@ -1,2 +1,7 @@
-Accepted Solutions Runtime Distribution: top 12.73%
+Accepted Solutions Runtime Distribution
+	- first method: top 12.73%
+	- second method: top 77.15%
+
 Accepted Solutions Memory Distribution: top 8.13%
+	- first method: top 8.13%
+	- second method: top 92.4%

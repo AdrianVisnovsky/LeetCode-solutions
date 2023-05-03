@@ -54,5 +54,20 @@ namespace ReverseWords557
 			return stringBuilder.ToString();
 		}
 
-	}
+        public string ReverseWords2(string s)
+        {
+
+            string[] splitted = s.Split(" ");
+            string result = "";
+
+            foreach (string word in splitted)
+            {
+                result += new string(word.Reverse().ToArray()) + " ";
+            }
+
+            return result.TrimEnd();
+        }
+
+    }
+
 }

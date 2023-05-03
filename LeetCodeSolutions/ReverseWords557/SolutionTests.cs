@@ -13,7 +13,7 @@ namespace ReverseWords557
         }
 
         [Fact]
-        public void TestReverse1()
+        public void TestReverseFirstMethodFact()
         {
 
             string input = "Let's take LeetCode contest";
@@ -28,10 +28,35 @@ namespace ReverseWords557
         [InlineData("Let's take LeetCode contest", "s'teL ekat edoCteeL tsetnoc")]
         [InlineData("God Ding", "doG gniD")]
         [InlineData("", "")]
-        public void TestReverse(string input, string expected)
+        public void TestReverseFirstMethodTheory(string input, string expected)
         {
 
             string result = _sut.ReverseWords(input);
+
+            Assert.Equal(expected, result);
+
+        }
+
+        [Fact]
+        public void TestReverseSecondMethodFact()
+        {
+
+            string input = "Let's take LeetCode contest";
+            string result = _sut.ReverseWords2(input);
+            string expectedResult = "s'teL ekat edoCteeL tsetnoc";
+
+            Assert.Equal(expectedResult, result);
+
+        }
+
+        [Theory]
+        [InlineData("Let's take LeetCode contest", "s'teL ekat edoCteeL tsetnoc")]
+        [InlineData("God Ding", "doG gniD")]
+        [InlineData("", "")]
+        public void TestReverseSecondMethodTheory(string input, string expected)
+        {
+
+            string result = _sut.ReverseWords2(input);
 
             Assert.Equal(expected, result);
 
