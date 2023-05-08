@@ -38,7 +38,6 @@ WITH CTE (Department, Employee, Salary, SalaryRank) AS (
             JOIN #Department AS D ON D.id = E.departmentId
     )
 SELECT CTE.Department, CTE.Employee, CTE.Salary
-   FROM CTE
-   WHERE SalaryRank < 4
+    FROM CTE
+    WHERE SalaryRank < 4
     ORDER BY CTE.department, CTE.salary DESC, CTE.Employee;
-
