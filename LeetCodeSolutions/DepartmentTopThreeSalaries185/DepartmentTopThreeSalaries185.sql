@@ -31,8 +31,8 @@ INSERT INTO #Department
         (1, 'IT'),
         (2, 'Sales');
 
-WITH CTE AS (
-        SELECT D.[name] AS [department], E.[name] AS Employee, E.salary AS Salary,
+WITH CTE (Department, Employee, Salary, SalaryRank) AS (
+        SELECT D.[name] AS [Department], E.[name] AS Employee, E.salary AS Salary,
             DENSE_RANK() OVER (PARTITION BY E.departmentId ORDER BY E.salary DESC) SalaryRank
         FROM #Employee AS E
             JOIN #Department AS D ON D.id = E.departmentId
